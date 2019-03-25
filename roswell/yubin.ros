@@ -1,0 +1,17 @@
+#!/bin/sh
+#|-*- mode:lisp -*-|#
+#|
+exec ros -Q -- $0 "$@"
+|#
+(progn ;;init forms
+  (ros:ensure-asdf)
+  #+quicklisp(ql:quickload '(yubin) :silent t)
+  )
+
+(defpackage :ros.script.yubin.3761982565
+  (:use :cl))
+(in-package :ros.script.yubin.3761982565)
+
+(defun main (zipcode &rest argv)
+  (declare (ignorable argv))
+  (yubin:get-place zipcode))
