@@ -10,12 +10,19 @@ This is an example of making a Common Lisp project using [cl-project](https://gi
 
 Postal code is called "Yubin Bangou" in Japanese.  The app "Yubin" searches the name of a place by `yubin` command.
 
-### Usage
+### Installation
 
-You can install yubin via Roswell.  And `yubin <postalcode>` will return the place name of the postal code.
+You can install yubin using Roswell.
 
 ```
 $ ros install clfreaks/yubin
+```
+
+### Usage
+
+`yubin <postalcode>` will return the place name of the postal code.
+
+```
 $ yubin 6380321
 "奈良県吉野郡天川村坪内"
 ```
