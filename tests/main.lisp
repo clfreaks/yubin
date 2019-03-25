@@ -6,14 +6,9 @@
 
 ;; NOTE: To run this test file, execute `(asdf:test-system :yubin)' in your Lisp.
 
-(deftest test-yubin-1
-  (testing "(yubin:get-place 6380321) should equal to \"奈良県吉野郡天川村坪内\"")
-    (ok (equal (yubin:get-place 6380321) "奈良県吉野郡天川村坪内")))
-
-(deftest test-yubin-2
-  (testing "should (equal (yubin:get-place 1500000) \"東京都渋谷区\") to be true")
+(deftest yubin
+  (testing "should return the address for a given postal code"
+    (ok (equal (yubin:get-place 6380321) "奈良県吉野郡天川村坪内"))
     (ok (equal (yubin:get-place 1500000) "東京都渋谷区")))
-
-(deftest test-yubin-3
-  (testing "(yubin:get-place 6068501) should equal to \"\"")
-    (ok (equal (yubin:get-place 6068501) "")))
+  (testing "should return an empty string for an unknown postal code"
+    (ok (equal (yubin:get-place 6068501) ""))))
