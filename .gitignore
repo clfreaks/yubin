@@ -8,3 +8,4 @@
 .#*
 *.asd~
 .DS_Store
+*.ros~
