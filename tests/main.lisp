@@ -7,7 +7,7 @@
 ;; NOTE: To run this test file, execute `(asdf:test-system :yubin)' in your Lisp.
 
 (deftest test-yubin-1
-  (testing "(yubin:get-place 6380321) should equal to \"奈良県吉野郡天川村川合\"")
+  (testing "(yubin:get-place 6380321) should equal to \"奈良県吉野郡天川村坪内\"")
     (ok (equal (yubin:get-place 6380321) "奈良県吉野郡天川村坪内")))
 
 (deftest test-yubin-2
