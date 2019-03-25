@@ -24,7 +24,7 @@ $ ros install clfreaks/yubin
 
 ```
 $ yubin 6380321
-"奈良県吉野郡天川村坪内"
+奈良県吉野郡天川村坪内
 ```
 
 ### Author
