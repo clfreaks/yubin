@@ -27,6 +27,15 @@ $ yubin 6380321
 奈良県吉野郡天川村坪内
 ```
 
+## Building a Docker image
+
+```
+# For building a Docker image
+$ docker build . -t yubin
+# Running the web server at localhost:5000
+$ docker run -t -i -p 5000:5000 yubin
+```
+
 ### Author
 
 t-cool
