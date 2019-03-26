@@ -14,4 +14,4 @@ exec ros -Q -- $0 "$@"
 
 (defun main (zipcode &rest argv)
   (declare (ignorable argv))
-  (format t "~A~%" (yubin:get-place zipcode)))
+  (format t "~&~A~%" (yubin:get-place zipcode)))
