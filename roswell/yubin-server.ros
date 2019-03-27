@@ -1,0 +1,26 @@
+#!/bin/sh
+#|-*- mode:lisp -*-|#
+#|
+exec ros -Q -- $0 "$@"
+|#
+(progn ;;init forms
+  (ros:ensure-asdf)
+  #+quicklisp (ql:quickload '(:yubin :clack :clack-handler-woo) :silent t))
+
+(defpackage :ros.script.yubin-server.3762644102
+  (:use :cl))
+(in-package :ros.script.yubin-server.3762644102)
+
+(defvar *app*
+  (clack:eval-file
+    (asdf:system-relative-pathname :yubin #P"app.lisp")))
+
+(defun main (&rest argv)
+  (declare (ignorable argv))
+  (clack:clackup *app*
+                 :server :woo
+                 :address "0.0.0.0"
+                 :port 5000
+                 :debug nil
+                 :use-thread nil))
+;;; vim: set ft=lisp lisp:
